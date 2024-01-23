@@ -39,5 +39,5 @@ def confirm(request):
         #選択ボタンを押された際confirm.htmlに出動
         return render(request, 'weather_app/confirm.html', {'place_name': place_name, 'today_date': today_date, 'weather_image': weather_image, 'change_weather': change_weather, 'max_temp': max_temp, 'min_temp': min_temp})
         
-    # GETリクエストの場合はindex.htmlを表示
+    #GETリクエストの場合はindex.htmlを表示
     return render(request, 'weather_app/index.html')
