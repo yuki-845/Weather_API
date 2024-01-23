@@ -4,6 +4,7 @@ import requests
 
 # Create your views here.
 def confirm(request):
+    
     if request.method == 'POST':
 
         #選択された地域のIDを取得
