@@ -7,6 +7,8 @@
     <title>Form</title>
 </head>
 <body>
+    <h1>Weather Information</h1>
+    <h2>今日の天気の知りたい場所を選択してください</h2>
     <form method="post" action="{% url 'weather_app:confirm' %}">
         {% csrf_token %}
         <select name="choice" id="choice">

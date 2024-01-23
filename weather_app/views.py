@@ -22,13 +22,13 @@ def confirm(request):
         place_name = response.json()['location']['prefecture']
         
         #今日の日付
-        today_date = response.json()['publicTimeFormatted']
+        today_date = response.json()['forecasts'][0]['date'].replace("-","/") #"-"から"/"に置換        
         
         #天気の画像
         weather_image = response.json()['forecasts'][0]['image']['url']
         
         #１日の天気の移り変わり
-        change_weather = response.json()['forecasts'][0]['detail']['weather']
+        change_weather = response.json()['forecasts'][0]['telop']
         
         #最高気温
         max_temp = response.json()['forecasts'][0]['temperature']['min']['celsius']
