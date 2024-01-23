@@ -1,0 +1,18 @@
+<!-- templates/confirm.html -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation</title>
+</head>
+<body>
+    <h2>Weather Information </h2>
+    <h3>{{place_name}} {{today_date}}の天気</h3>
+    <img src="{{weather_image}}" alt="" width="200" height="200">
+    <h4>{{change_weather}}</h4>
+    <p>最高気温: {{ max_temp }}</p>
+    <p>最低気温: {{ min_temp }}</p>
+    <a href="{{request.META.HTTP_REFERER}}">トップページに戻る</a>
+</body>
+</html>
